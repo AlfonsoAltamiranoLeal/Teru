@@ -1,0 +1,192 @@
+@import '../../../assets/menu.scss';
+.Alert_container {
+  width: 288px;
+  height: 96px;
+  border-radius: 6px;
+  border: solid 1px var(--pink);
+  margin: 19px 0 16px 0;
+  align-items: center;
+}
+.Alert_container_off {
+  width: 290px;
+  height: 98px;
+  z-index: 10;
+  margin: 19px 0 16px 0;
+}
+.Alert_container_off >div{
+  display: none;
+}
+.Forgot{
+  width: 290px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Forgot > a{
+  width: 135px;
+  height: 17px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--blue);
+}
+.Form-flex{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.Form-flex > p{
+  width: 288px;
+}
+.button_off {
+  width: 288px;
+  height: 40px;
+  opacity: 0.7;
+  border-radius: 4px;
+  border: solid 1px var(--yellow);
+  margin: 8px 63px;
+}
+.button_on {
+  width: 288px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--yellow);
+  margin: 8px 63px;
+}
+Form > p{
+  width: 288px;
+}
+.The-email-or-passwor {
+
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--pink);
+  margin: 0;
+}
+.AtomsIconsgeneralalert {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  position: relative;
+  margin: 12px 0 8px 0;
+  left: 131px;
+}
+.Enter-the-following {
+  width: 242px;
+  height: 16px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 75px 0 24px 0;
+  text-align: center;
+  color: var(--dark);
+}
+.Login{
+  opacity: 0.5;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+}
+.Login_on{
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+}
+.The-email-or-passwor {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--pink);
+}
+@media screen and (max-width: 360px){
+  .button_off {
+    width: 288px;
+    height: 40px;
+    opacity: 0.7;
+    border-radius: 4px;
+    border: solid 1px var(--yellow);
+    margin: 8px 0;
+  }
+  .button_on {
+    width: 288px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    margin: 8px 0;
+  }
+  .Alert_container_off {
+    width: 288px;
+    height: 80px;
+    z-index: 10;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 16px 0 19px 0;
+  }
+  .Alert_container {
+    width: 288px;
+    height: 80px;
+    border-radius: 6px;
+    border: solid 1px var(--pink);
+    box-sizing: border-box;
+    margin: 16px 0 19px 0;
+  }
+  .habilita{
+    margin: 0 0 14px 0;
+  }
+  .Forgot{
+    width: 290px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 28px 0 0 0;
+  }
+  .Enter-the-following{
+    width: 242px;
+    height: 16px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin: 55px 0 24px 0;
+    text-align: center;
+    color: var(--dark);
+  }
+}

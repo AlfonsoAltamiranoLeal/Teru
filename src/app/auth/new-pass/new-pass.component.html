@@ -1,0 +1,51 @@
+<div class="Contenedor-flex">
+  <app-icono class="Top-flex" ></app-icono>
+  <div class="Mid-flex">
+
+    <Form>
+
+      <p class="Create-a-new-passwor titulo">
+        Create a new password
+      </p>
+
+      <div class="Strong-passwords-inc  " >
+        <p>Strong passwords include 8-16 alphanumeric characters</p>
+      </div>
+
+
+      <mat-form-field
+      [ngClass]="{habilita:!pass.touched , deshabilita: pass.touched || !pass.value }">
+        <mat-label>Password</mat-label>
+        <input [(ngModel)]="PassSt" autocomplete="off"
+        [type]=" passOnOff ? 'password' : 'text' " matInput >
+        <mat-icon matSuffix>
+          <button type="button" (click)="lookPass()" > <p class="PButon" > {{Show}} </p></button>
+        </mat-icon>
+        <mat-error *ngIf="Pass" >Your password must have at least
+          8 alphanumeric characters
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field
+      [ngClass]="{habilita:!pass2.touched , deshabilita: pass2.touched || !pass2.value }">
+        <mat-label>Password</mat-label>
+        <input [(ngModel)]="PassSt2"  autocomplete="off"
+        [type]=" passOnOff2 ? 'password' : 'text' " matInput >
+        <mat-icon matSuffix>
+          <button type="button" (click)="lookPass2()" > <p class="PButon"> {{Show2}} </p></button>
+        </mat-icon>
+        <mat-error *ngIf="Pass2" >Password don´t match
+        </mat-error>
+      </mat-form-field>
+
+      <button type="button" mat-button (click)="ComparaPass()"  (click)="Color()" [ngClass]="{button_off:Reset,button_on:!Reset }" >
+        <p [ngClass]="{button :Reset,TxtBodyDarkBoldCenter_14px:!Reset}">
+          Reset password
+        </p>
+      </button>
+
+    </Form>
+
+  </div>
+  <app-foot class="foot-flex" ></app-foot>
+</div>

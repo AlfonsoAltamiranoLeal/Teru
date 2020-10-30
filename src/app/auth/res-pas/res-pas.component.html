@@ -1,0 +1,32 @@
+<Form>
+
+  <div class="Form-flex">
+
+    <div class="Forgot-password ">
+      <P class="TxtBodyDarkBoldCenter_14px"> Forgot password </P>
+    </div>
+
+    <div class="Please-enter-your-e" >
+      <p > Please, enter your email to help you reset your password </p>
+    </div>
+
+    <mat-form-field
+    [ngClass]="{TxtBodyInactiveRegularLeft_14px:!email.touched , TxtBodyDarkRegularLeft_14px: email.touched || email.value }">
+      <mat-label>Mail</mat-label>
+      <input type="email"  matInput color = "#dark" [formControl] = "email">
+      <mat-icon> </mat-icon>
+      <mat-error *ngIf="!email.valid" >This mail is not correct</mat-error>
+    </mat-form-field>
+
+    <button type="button" mat-button (click)="Color()" [ngClass]="{button_off:Send,button_on:!Send }" >
+      <p [ngClass]="{button :Send,TxtBodyDarkBoldCenter_14px:Send}">
+       Send
+      </p>
+    </button>
+
+    <button type="button" mat-button class="Login" > <p class="TxtBodyPearlBoldCenter_14px" > Back to login </p> </button>
+
+  </div>
+
+</Form>
+

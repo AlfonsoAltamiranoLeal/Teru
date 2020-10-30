@@ -1,0 +1,155 @@
+@import './assets/colors.scss';
+@import './assets/text.scss';
+
+/*  AUTH */
+*{
+  margin: 0;
+  padding: 0;
+  }
+.Contenedor-flex{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Top-flex{
+  flex-grow: 1;
+  width: 100%;
+  max-height: 149px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Mid-flex{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.foot-flex{
+  flex-grow: 1;
+  max-height: 95px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+/*****************************/
+//Material
+
+.mat-body, .mat-body-1, .mat-typography {
+  letter-spacing: normal;
+}
+.mat-form-field-appearance-legacy {
+  div.mat-form-field-wrapper {
+    padding: 0px;
+  }
+  div.mat-form-field-infix {
+    border : none;
+    padding: 0;
+    height: 66px;
+  }
+  div.mat-form-field-underline{
+    bottom: 1.25em;
+  }
+  .mat-form-field-label-wrapper {
+    top: 7px;
+    /* padding-top: .84375em; */
+  }
+  .mat-form-field-label{
+    overflow: unset;
+    color: var(--dark);
+  }
+  .mat-form-field-underline {
+    background-color: var(--dark);
+  }
+}
+
+.mat-form-field.mat-focused{
+  .mat-form-field-label{
+    position: relative;
+    top: 8px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--dark);
+  }
+  .mat-form-field-ripple {
+    background-color: var(--dark);
+  }
+}
+
+.mat-form-field-appearance-legacy{
+  .mat-form-field-label{
+    position: relative;
+    top: 8px;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--dark);
+  }
+  .mat-form-field-underline {
+    background-color: var(--dark);
+  }
+}
+/****************************************/
+//Mobile
+
+@media screen and (max-width: 360px){
+  .mat-form-field-appearance-legacy {
+    // div.mat-form-field-infix{
+    //   border: none;
+    //   padding: 0;
+    //   height: 48px;
+    // }
+    .mat-form-field-underline {
+      height: 1px;
+      // position: relative;
+      // top: 0;
+    }
+  }
+ .mat-form-field-subscript-wrapper {
+    //display: none;
+  }
+  .Contenedor-flex{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Top-flex{
+    flex-grow: 1;
+    width: 100%;
+    max-height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .Mid-flex{
+    max-height: 473px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .foot-flex{
+    flex-grow: 1;
+    max-height: 31px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+

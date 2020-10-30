@@ -1,0 +1,23 @@
+div > p{
+  width: 288px;
+  margin: 0 0 79px 0;
+}
+.Designed-and-develop {
+  width: 260px;
+  height: 17px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+}
+@media screen and (max-width: 360px){
+  div > p{
+    width: 288px;
+    margin: 0 0 15px 0;
+  }
+}

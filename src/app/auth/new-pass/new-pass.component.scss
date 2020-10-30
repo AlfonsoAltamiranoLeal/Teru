@@ -1,0 +1,67 @@
+@import '../../../assets/menu.scss';
+p{
+  margin: 0;
+}
+.Create-a-new-passwor {
+  width: 158px;
+  height: 17px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  margin: 0 0 15px 0;
+}
+.Strong-passwords-inc {
+  width: 211px;
+  height: 34px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  margin: 0 0 40px 0;
+}
+.button_off {
+  width: 288px;
+  height: 40px;
+  opacity: 0.7;
+  border-radius: 4px;
+  border: solid 1px var(--yellow);
+  margin: 0px 0px 88px 0;
+}
+.button_on {
+  width: 288px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--yellow);
+  margin: 0px 0px 88px 0;
+}
+.titulo{
+  margin: 73px 0 15px 0;
+}
+.button {
+  opacity: 0.5;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+}
+@media screen and (max-width: 360px){
+  .habilita{
+    margin: 0 0 48px 0;
+  }
+}

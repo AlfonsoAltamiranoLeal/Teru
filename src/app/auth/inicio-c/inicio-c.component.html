@@ -1,0 +1,47 @@
+<Form>
+
+  <div class="Form-flex">
+
+    <p class="Enter-the-following " >
+      Enter the following information to login
+    </p>
+
+    <mat-form-field
+    [ngClass]="{habilita:!email.touched ,deshabilita: email.touched || email.value }">
+      <mat-label  class="label" >Mail</mat-label>
+      <input type="email"  matInput color = "#dark" [formControl] = "email">
+      <mat-icon> </mat-icon>
+      <mat-error *ngIf="!email.valid" >This mail is not correct</mat-error>
+    </mat-form-field>
+
+    <mat-form-field
+    [ngClass]="{habilita:!pass.touched , deshabilita: pass.touched || !pass.value }">
+      <mat-label>Password</mat-label>
+      <input autocomplete="off" [type]=" passOnOff ? 'password' : 'text' " matInput >
+      <mat-icon matSuffix>
+        <button type="button" (click)="lookPass()" > <p class="PButon"> {{Show}} </p></button>
+      </mat-icon>
+    </mat-form-field>
+
+    <button type="button" [ngClass]="{button_off:Message,button_on:!Message }" mat-button (click)="cleerMessage()">
+      <p [ngClass]="{Login :Message,Login_on :!Message}" >
+        Login
+      </p>
+    </button>
+
+    <div class="Forgot">
+      <a href="auth/restore"> ¿Forgot password? </a>
+    </div>
+
+    <div  [ngClass]="{Alert_container_off:Message , Alert_container:!Message}" >
+      <div>
+        <img src="../../../assets/img/atoms-icons-general-alert.svg"
+        class="AtomsIconsgeneralalert">
+        <p class="The-email-or-passwor">The email or password you entered aren´t  correct, verify your information</p>
+      </div>
+    </div>
+
+
+  </div>
+
+</Form>

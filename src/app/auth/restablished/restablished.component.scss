@@ -1,0 +1,50 @@
+.AtomsIllustrationcircle_square {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  margin: 43px 0 46px 0;
+}
+.Nice {
+  width: 54px;
+  height: 26px;
+  margin: 0 0 12px 0;
+}
+.You-have-changed-you {
+  width: 284px;
+  height: 38px;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  margin: 0 0 50px 0;
+}
+.button {
+  width: 288px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--blue);
+  margin: 0 0 112px 0;
+}
+p{
+  margin: 0;
+}
+@media screen and (max-width: 360px){
+  .AtomsIllustrationcircle_square {
+    width: 148px;
+    height: 148px;
+    object-fit: contain;
+    margin: 36px;
+  }
+  .button {
+    width: 288px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--blue);
+    margin: 0 0 97px 0;
+  }
+}

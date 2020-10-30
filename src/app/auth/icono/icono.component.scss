@@ -1,0 +1,31 @@
+.AtomsIconsGeneralLogo_terumo {
+  width: 200px;
+  height: 37px;
+  object-fit: contain;
+  margin: 80px 0 15px 0;
+}
+.Latinamerica-Corpora {
+  height: 17px;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+  margin: 0;
+}
+div >p{
+  margin: 0;
+  text-align: center;
+}
+@media screen and (max-width: 360px){
+  .AtomsIconsGeneralLogo_terumo {
+    width: 200px;
+    height: 37px;
+    object-fit: contain;
+    margin: 44px 0 15px 0;
+  }
+}
