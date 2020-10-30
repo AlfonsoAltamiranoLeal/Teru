@@ -40,7 +40,4 @@ export class InicioCComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
-
 }

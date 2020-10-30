@@ -14,31 +14,36 @@
 
 
       <mat-form-field
-      [ngClass]="{habilita:!pass.touched , deshabilita: pass.touched || !pass.value }">
+      [ngClass]="{habilita:!contrasena.touched , deshabilita: contrasena.touched || !contrasena.value }">
         <mat-label>Password</mat-label>
-        <input [(ngModel)]="PassSt" autocomplete="off"
+        <input [(ngModel)]="PassSt" autocomplete="off" [formControl] = "contrasena"
         [type]=" passOnOff ? 'password' : 'text' " matInput >
+        <mat-error *ngIf="true" >
+          <p class="Error">
+            Your password must have at least
+            8 alphanumeric characters
+          </p>
+        </mat-error>
         <mat-icon matSuffix>
           <button type="button" (click)="lookPass()" > <p class="PButon" > {{Show}} </p></button>
         </mat-icon>
-        <mat-error *ngIf="Pass" >Your password must have at least
-          8 alphanumeric characters
-        </mat-error>
       </mat-form-field>
 
+
       <mat-form-field
-      [ngClass]="{habilita:!pass2.touched , deshabilita: pass2.touched || !pass2.value }">
+      [ngClass]="{habilita:!repetirContrasena.touched , deshabilita: repetirContrasena.touched || !repetirContrasena.value }">
         <mat-label>Password</mat-label>
-        <input [(ngModel)]="PassSt2"  autocomplete="off"
+        <input [(ngModel)]="PassSt2"  autocomplete="off " [formControl] = "repetirContrasena"
         [type]=" passOnOff2 ? 'password' : 'text' " matInput >
+        <mat-error *ngIf="true" >Password don´t match
+        </mat-error>
         <mat-icon matSuffix>
           <button type="button" (click)="lookPass2()" > <p class="PButon"> {{Show2}} </p></button>
         </mat-icon>
-        <mat-error *ngIf="Pass2" >Password don´t match
-        </mat-error>
+
       </mat-form-field>
 
-      <button type="button" mat-button (click)="ComparaPass()"  (click)="Color()" [ngClass]="{button_off:Reset,button_on:!Reset }" >
+      <button type="button" mat-button (click)="ComparaPass()" (click)="Color()" [ngClass]="{button_off:Reset,button_on:!Reset }" >
         <p [ngClass]="{button :Reset,TxtBodyDarkBoldCenter_14px:!Reset}">
           Reset password
         </p>

@@ -2,6 +2,16 @@
 p{
   margin: 0;
 }
+.habilita{
+    width: 288px;
+    height: 78px;
+    margin: 0 0 18px 0 ;
+}
+.deshabilita{
+  width: 288px;
+  height: 78px;
+  margin: 0 0 18px 0 ;
+}
 .Create-a-new-passwor {
   width: 158px;
   height: 17px;
@@ -36,14 +46,14 @@ p{
   opacity: 0.7;
   border-radius: 4px;
   border: solid 1px var(--yellow);
-  margin: 0px 0px 88px 0;
+  margin: 38px 0px 88px 0;
 }
 .button_on {
   width: 288px;
   height: 40px;
   border-radius: 4px;
   background-color: var(--yellow);
-  margin: 0px 0px 88px 0;
+  margin: 38px 0px 88px 0;
 }
 .titulo{
   margin: 73px 0 15px 0;
@@ -60,8 +70,35 @@ p{
   text-align: center;
   color: var(--dark);
 }
+.Error {
+  width: 237px;
+  height: 26px;
+  font-family: Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--red);
+}
 @media screen and (max-width: 360px){
-  .habilita{
-    margin: 0 0 48px 0;
+  .titulo{
+    margin: 39px 0 15px 0;
+  }
+  .button_off {
+    width: 288px;
+    height: 40px;
+    opacity: 0.7;
+    border-radius: 4px;
+    border: solid 1px var(--yellow);
+    margin: 8px 0px 86px 0;
+  }
+  .button_on {
+    width: 288px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--yellow);
+    margin: 8px 0px 86px 0;
   }
 }

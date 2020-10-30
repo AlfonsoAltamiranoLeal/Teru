@@ -10,18 +10,17 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class NewPassComponent implements OnInit {
 
-  pass = new FormControl('', [Validators.required]);
-  pass2 = new FormControl('', [Validators.required]);
+  contrasena = new FormControl('', [Validators.required, Validators.minLength(8)]);
+  repetirContrasena = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
   passOnOff = true;
   passOnOff2 = true;
   Reset = true;
   Show = 'Show';
   Show2 = 'Show';
-  Pass = true;
-  Pass2 = true;
   PassSt = '';
   PassSt2 = '';
+  Iguales = false;
 
   lookPass(): boolean {
     this.passOnOff = !this.passOnOff;
@@ -53,22 +52,17 @@ export class NewPassComponent implements OnInit {
   }
 
   ComparaPass(): boolean{
-    if ( this.PassSt.length < 8){
-      return this.Pass = !this.Pass;
-    }
-    for ( let i: number = this.PassSt.length ; i === 0; i-- ){
-      if (this.PassSt[i] !== this.PassSt2[i]){
-        return this.Pass2 = false;
+    console.log( this.PassSt.length );
+    for ( let i = this.PassSt.length ; i > 0; i-- ){
+      console.log( 'ws' );
+      console.log(i);
+      if (this.PassSt[(i - 1)] !== this.PassSt2[(i - 1)]){
+        console.log(this.Iguales);
+        return this.Iguales = true;
       }
     }
-    this.Pass = true;
-    this.Pass2 = true;
-    if ( this.Pass === true && this.Pass2 === true){
-      return true;
-    }else{
-      return false;
-    }
-
+    console.log(this.Iguales);
+    return this.Iguales = false;
   }
   constructor() { }
 
