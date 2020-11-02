@@ -1,0 +1,75 @@
+.header {
+  width: 100vw;
+  height: 56px;
+  background-color: purple;
+  display:flex;
+  justify-content: space-between;
+}
+.AtomsIconsGeneralLogo_terumo {
+  width: 150px;
+  height: 28px;
+  object-fit: contain;
+  margin: 16px 24px 12px 24px;
+}
+.Nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 928px;
+  height: 48px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 2px 4px 0 rgba(68, 75, 82, 0.2);
+  background-color: var(--terumo);
+}
+.Container {
+  width: 184px;
+  height: 40px;
+  margin: 8px 16px;
+}
+.MoleculesTabMenuActive {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--pearl);
+  margin: 14px;
+}
+.MoleculesTabMenuInactive {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--pearl);
+  margin: 14px;
+}
+.MoleculesTabNotificaciones{
+  width: 72px;
+  height: 48px;
+}
+.Tab{
+  width: 188px;
+  height: 48px;
+  background-color: var(--terumo);
+  border-radius: 0 0 40px 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.Line{
+  width: 100%;
+  height: 3px;
+  background-color: var(--pearl);
+  border-radius: 10px;
+  position: relative;
+}
+li{
+  list-style-type:none;
+  }

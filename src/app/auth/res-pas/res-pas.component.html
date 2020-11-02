@@ -11,15 +11,19 @@
     </div>
 
     <mat-form-field
-    [ngClass]="{TxtBodyInactiveRegularLeft_14px:!email.touched , TxtBodyDarkRegularLeft_14px: email.touched || email.value }">
-      <mat-label>Mail</mat-label>
+      [ngClass]="{habilita:email.value ,deshabilita: !email.value}">
+      <mat-label [ngClass]="{habilita:email.value ,deshabilita: !email.value}">Mail</mat-label>
       <input type="email"  matInput color = "#dark" [formControl] = "email">
       <mat-icon> </mat-icon>
       <mat-error *ngIf="!email.valid" >This mail is not correct</mat-error>
     </mat-form-field>
 
-    <button type="button" mat-button (click)="Color()" [ngClass]="{button_off:Send,button_on:!Send }" >
-      <p [ngClass]="{button :Send,TxtBodyDarkBoldCenter_14px:Send}">
+    <button type="button" mat-button
+      [class.button_off] = "email.errors"
+      [class.button_on] = "!email.errors"
+      [ngClass]="{button_off:Send,button_on:!Send }" >
+      <p [class.button] = "email.errors"
+         [class.TxtBodyDarkBoldCenter_14px] = "!email.errors">
        Send
       </p>
     </button>

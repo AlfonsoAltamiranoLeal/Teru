@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Importar para Material */
 import {SharedModule} from '../../src/app/shared/shared.module';
+import { HeadComponent } from './head/head.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeadComponent,
   ],
   imports: [
     BrowserModule,

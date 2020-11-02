@@ -14,9 +14,9 @@
 
 
       <mat-form-field
-      [ngClass]="{habilita:!contrasena.touched , deshabilita: contrasena.touched || !contrasena.value }">
-        <mat-label>Password</mat-label>
-        <input [(ngModel)]="PassSt" autocomplete="off" [formControl] = "contrasena"
+        [ngClass]="{habilita: contrasena.value , deshabilita: !contrasena.value}">
+        <mat-label [ngClass]="{habilita: contrasena.value , deshabilita: !contrasena.value}" >Password</mat-label>
+        <input [(ngModel)]="Pass1" autocomplete="off" [formControl] = "contrasena"
         [type]=" passOnOff ? 'password' : 'text' " matInput >
         <mat-error *ngIf="true" >
           <p class="Error">
@@ -31,9 +31,10 @@
 
 
       <mat-form-field
-      [ngClass]="{habilita:!repetirContrasena.touched , deshabilita: repetirContrasena.touched || !repetirContrasena.value }">
-        <mat-label>Password</mat-label>
-        <input [(ngModel)]="PassSt2"  autocomplete="off " [formControl] = "repetirContrasena"
+        [ngClass]="{habilita: repetirContrasena.value , deshabilita: !repetirContrasena.value}">
+        <mat-label [ngClass]="{habilita: repetirContrasena.value , deshabilita: !repetirContrasena.value}">
+        Password</mat-label>
+        <input [(ngModel)]="Pass2"  autocomplete="off " [formControl] = "repetirContrasena"
         [type]=" passOnOff2 ? 'password' : 'text' " matInput >
         <mat-error *ngIf="true" >Password don´t match
         </mat-error>
@@ -43,10 +44,14 @@
 
       </mat-form-field>
 
-      <button type="button" mat-button (click)="ComparaPass()" (click)="Color()" [ngClass]="{button_off:Reset,button_on:!Reset }" >
-        <p [ngClass]="{button :Reset,TxtBodyDarkBoldCenter_14px:!Reset}">
-          Reset password
-        </p>
+      <button type="button" mat-button (click)="ComparaPass()"
+              [class.button_off] = "contrasena.errors || repetirContrasena.errors"
+              [class.button_on] = "!contrasena.errors && !repetirContrasena.errors">
+              <p
+              [class.button] = "contrasena.errors || repetirContrasena.errors"
+              [class.TxtBodyDarkBoldCenter_14px] = "!contrasena.errors && !repetirContrasena.errors">
+              Reset password
+              </p>
       </button>
 
     </Form>

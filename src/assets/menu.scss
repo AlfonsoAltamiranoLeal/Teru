@@ -13,6 +13,7 @@ input{
   position: relative;
   left: 1rem;
   top: 24px;
+  font-size: 13.5px;
 }
 mat-label{
   position: relative;
@@ -60,4 +61,24 @@ Form{
 
 .PButon{
   text-decoration: underline;
+}
+.habilita{
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+.deshabilita{
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--inactive);
 }

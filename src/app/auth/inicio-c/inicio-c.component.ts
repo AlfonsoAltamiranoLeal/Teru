@@ -32,6 +32,8 @@ export class InicioCComponent implements OnInit {
   }
 
   cleerMessage(): boolean{
+    console.log(this.email);
+    console.log(this.pass);
     this.Message = !this.Message;
     return this.Message;
   }

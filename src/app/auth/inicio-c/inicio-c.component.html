@@ -7,24 +7,28 @@
     </p>
 
     <mat-form-field
-    [ngClass]="{habilita:!email.touched ,deshabilita: email.touched || email.value }">
-      <mat-label  class="label" >Mail</mat-label>
+    [ngClass]="{habilita:email.value ,deshabilita: !email.value}">
+      <mat-label  [ngClass]="{habilita:email.value ,deshabilita: !email.value}">Mail</mat-label>
       <input type="email"  matInput color = "#dark" [formControl] = "email">
       <mat-icon> </mat-icon>
       <mat-error *ngIf="!email.valid" >This mail is not correct</mat-error>
     </mat-form-field>
 
     <mat-form-field
-    [ngClass]="{habilita:!pass.touched , deshabilita: pass.touched || !pass.value }">
-      <mat-label>Password</mat-label>
-      <input autocomplete="off" [type]=" passOnOff ? 'password' : 'text' " matInput >
+    [ngClass]="{habilita: pass.value , deshabilita: !pass.value}">
+      <mat-label [ngClass]="{habilita: pass.value , deshabilita: !pass.value}" >Password</mat-label>
+      <input autocomplete="off" [type]=" passOnOff ? 'password' : 'text' " matInput [formControl] = "pass" >
       <mat-icon matSuffix>
         <button type="button" (click)="lookPass()" > <p class="PButon"> {{Show}} </p></button>
       </mat-icon>
     </mat-form-field>
 
-    <button type="button" [ngClass]="{button_off:Message,button_on:!Message }" mat-button (click)="cleerMessage()" >
-      <p [ngClass]="{Login :Message,Login_on :!Message}" >
+    <button type="button"
+            [class.button_off] = "pass.errors || email.errors"
+            [class.button_on] = "!pass.errors && !email.errors"
+            mat-button (click)="cleerMessage()" >
+      <p [class.Login] = "pass.errors || email.errors"
+         [class.Login_on] = "!pass.errors && !email.errors">
         Login
       </p>
     </button>

@@ -3,14 +3,30 @@ p{
   margin: 0;
 }
 .habilita{
-    width: 288px;
-    height: 78px;
-    margin: 0 0 18px 0 ;
+  width: 288px;
+  height: 78px;
+  margin: 0 0 18px 0 ;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
 }
 .deshabilita{
   width: 288px;
   height: 78px;
   margin: 0 0 18px 0 ;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--inactive);
 }
 .Create-a-new-passwor {
   width: 158px;

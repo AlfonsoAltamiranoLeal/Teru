@@ -15,11 +15,10 @@ export class NewPassComponent implements OnInit {
 
   passOnOff = true;
   passOnOff2 = true;
-  Reset = true;
   Show = 'Show';
   Show2 = 'Show';
-  PassSt = '';
-  PassSt2 = '';
+  Pass1 = '';
+  Pass2 = '';
   Iguales = false;
 
   lookPass(): boolean {
@@ -46,17 +45,13 @@ export class NewPassComponent implements OnInit {
     return this.passOnOff2;
   }
 
-  Color(): boolean{
-    this.Reset = !this.Reset;
-    return this.Reset;
-  }
 
   ComparaPass(): boolean{
-    console.log( this.PassSt.length );
-    for ( let i = this.PassSt.length ; i > 0; i-- ){
+    console.log( this.Pass1.length );
+    for ( let i = this.Pass1.length ; i > 0; i-- ){
       console.log( 'ws' );
       console.log(i);
-      if (this.PassSt[(i - 1)] !== this.PassSt2[(i - 1)]){
+      if (this.Pass1[(i - 1)] !== this.Pass2[(i - 1)]){
         console.log(this.Iguales);
         return this.Iguales = true;
       }
